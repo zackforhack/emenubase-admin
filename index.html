@@ -38,11 +38,11 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right hidden-sm hidden-md hidden-lg">
+            <li><a href="/MenuApp-Admin/#/about">About</a></li>
             <li><a href="/MenuApp-Admin/#/orders">Orders</a></li>
             <li><a href="/MenuApp-Admin/#/menu">Menu</a></li>
             <li><a href="/MenuApp-Admin/#/categories">Categories</a></li>
             <li><a href="/MenuApp-Admin/#/history">History</a></li>
-            <li><a href="">Feedback</a></li>
           </ul>
         </div>
       </div>
@@ -52,11 +52,11 @@
       <div>
         <div class="col-sm-1 col-md-1 sidebar">
           <ul class="nav nav-sidebar">
+            <li ng-class="{active: myPage == 'about'}"><a href="#about"><span class="glyphicon glyphicon-user"></span><br>About</a></li>
             <li ng-class="{active: myPage == 'orders'}"><a href="#orders"><span class="glyphicon glyphicon-cutlery"></span><br>Orders</a></li>
             <li ng-class="{active: myPage == 'menu'}"><a href="#menu"><span class="glyphicon glyphicon-list-alt"></span><br>Menu</a></li>
             <li ng-class="{active: myPage == 'categories'}"><a href="#categories"><span class="glyphicon glyphicon-th"></span><br>Categories</a></li>
             <li ng-class="{active: myPage == 'history'}"><a href="#history"><span class="glyphicon glyphicon-folder-open"></span><br>History</a></li>
-            <li ng-class="{active: myPage == 'feedback'}"><a href="#"><span class="glyphicon glyphicon-comment"></span><br>Feedback</a></li>
           </ul>
         </div>
         <div ng-view=""></div>
