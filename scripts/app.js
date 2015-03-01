@@ -26,10 +26,6 @@ angular.module('appApp', [
         templateUrl: 'views/history.html',
         controller: 'HistoryCtrl'
       })
-      .when('/reservation', {
-        templateUrl: 'views/reservation.html',
-        controller: 'ReservationCtrl'
-      })
       .otherwise({
         redirectTo: '/menu'
       });
