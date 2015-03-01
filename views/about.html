@@ -1,18 +1,32 @@
 <div class="col-sm-11 col-sm-offset-1">
 	<h3 class="page-header">About</h3>
-	<div class="panel panel-default" ng-class="{'panel-success':order.confirmed}" ng-repeat="(key,order) in history">
-		<div class="panel-heading clearfix">
-			<h3 class="panel-title pull-left">Table {{order.table}}</h3>
-			<button class="btn btn-danger btn-sm pull-right" ng-click="deleteHistory(key, this.order)">Delete History</button>
-		</div>
-		<ul class="list-group">
-			<li class="list-group-item" ng-repeat="item in order.order">
-				<span>{{item.title}}</span>
-				<span class="pull-right">${{item.price | number:2}}</span>
-			</li>
-		</ul>
-		<div class="panel-heading clearfix">
-			<span class="pull-right">Total: ${{order.total | number:2}}</span>
-		</div>
-	</div>
+	<div class="col-sm-12 add-menu-item-block">
+    <h3>Add Menu Item</h3>
+    <form name="menuForm">
+        <div class="form-group">
+            <input class="form-control" type="text" ng-model="menuItem.title" placeholder="Title">
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" type="text" rows="8" ng-model="menuItem.description" placeholder="One sentense description"></textarea>
+        </div>
+        <div class="form-group input-group">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li ng-repeat="categ in categories"><a href="" ng-click="menuItem.category = categ.name">{{categ.name}}</a></li>
+                </ul>
+            </div>
+            <input class="form-control" type="text" ng-model="menuItem.category" placeholder="Category">
+        </div>
+        <div class="form-group input-group">
+            <span class="input-group-addon">$</span>
+            <input class="form-control" type="number" ng-model="menuItem.price" placeholder="Price">
+        </div>
+        <div class="form-group">
+            <label>Item Image (under 10MB, 50KB recommended)</label>
+            <input type="file" ng-model="menuItem.image" name="file" base-sixty-four-input>
+        </div>
+    </form>
+    <p><a class="btn btn-success" ng-href="" ng-click="addItem()">Add New Item</a></p>
+</div>
 </div>
