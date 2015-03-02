@@ -7,7 +7,7 @@ angular.module('appApp')
     
   	$scope.updateProfile = function(about){
         
-        sync.$set({"foo": $scope.about.Address});
+        $scope.about.$save(about);
 
 
   	};
