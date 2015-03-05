@@ -7,7 +7,14 @@ angular.module('appApp')
     
   	$scope.updateProfile = function(about){
         
-        $scope.about.$save(about);
+        var newAbout = {
+                'Name': $scope.Name,
+                'Address': $scope.Address,
+                'Telephone': $scope.Telephone
+            };
+        $scope.about.$add(angular.fromJson(angular.toJson(newAbout))).then(function(ref) {
+
+            });
 
 
   	};
