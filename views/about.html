@@ -17,6 +17,14 @@
             <input class="form-control" type="text" ng-model="profile.Telephone">
         </div>
         <div class="form-group col-sm-5">
+            <label>Company Info Message:</label>
+            <input class="form-control" type="text" rows="3" ng-model="profile.Companyinfo">
+        </div>
+        <div class="form-group col-sm-5">
+            <label>Food Quality Message:</label>
+            <input class="form-control" type="text" rows="3" ng-model="profile.FoodQuality">
+        </div>
+        <div class="form-group col-sm-5">
         	<label>Hours: </label>
             <label>Monday: From</label>
             <input class="form-control" type="text" ng-model="profile.Hours.Monday.from">
@@ -46,14 +54,6 @@
             <input class="form-control" type="text" ng-model="profile.Hours.Sunday.from">
             <label>Sunday: To</label>
             <input class="form-control" type="text" ng-model="profile.Hours.Sunday.to">
-        </div>
-        <div class="form-group col-sm-5">
-            <label>Company Info Message:</label>
-            <input class="form-control" type="text" ng-model="profile.Companyinfo">
-        </div>
-        <div class="form-group col-sm-5">
-            <label>Food Quality Message:</label>
-            <input class="form-control" type="text" ng-model="profile.FoodQuality">
         </div>
      </form>
     <p><a class="btn btn-success col-sm-11" data-toggle="modal" data-target="#myModal" ng-href="" ng-click="updateProfile(key, this.profile)">Update Profile</a></p>
