@@ -3,8 +3,9 @@
 angular.module('appApp')
   .controller('OrdersCtrl', function ($scope, $firebase) {
   	var orders = new Firebase('https://gforgelato.firebaseio.com/Orders');
+    $scope.orders = $firebase(orders);
+    
     var history = new Firebase('https//gforgelato.firebaseio.com/History');
-  	$scope.orders = $firebase(orders);
   	$scope.history = $firebase(history);
   	$scope.confirmOrder = function(key, order){
   		order.confirmed = true;
