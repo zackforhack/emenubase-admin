@@ -5,6 +5,8 @@ angular.module('appApp')
     var menu = new Firebase('https://gforgelato.firebaseio.com/MenuItems');
     $scope.menuItems = $firebase(menu);
 
+    console.log($scope.menuItems);
+
 
     var categories = new Firebase('https://gforgelato.firebaseio.com/Category');
     categories.on('value', function(dataSnapshot) {
