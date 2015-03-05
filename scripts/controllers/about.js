@@ -13,10 +13,10 @@ angular.module('appApp')
         
 
             var newAbout = {
-                'Address': $scope.profile.Address,
-                'Name': $scope.profile.Name,
-                'Telephone': $scope.profile.Telephone,
-                'Hours': $scope.profile.Hours
+                'Address': profile.Address,
+                'Name': profile.Name,
+                'Telephone': profile.Telephone,
+                'Hours': profile.Hours
             };
 
         $scope.about.$add(angular.fromJson(angular.toJson(newAbout)));
