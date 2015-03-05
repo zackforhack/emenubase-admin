@@ -3,7 +3,10 @@
 angular.module('appApp')
   .controller('AboutCtrl', function ($scope, $firebase) {
     var about = new Firebase('https//gforgelato.firebaseio.com/About');
-  	$scope.about = $firebase(about);
+
+    about.on('value', function(dataSnapshot) {
+        $scope.about = dataSnapshot.val();
+      });
     
   	$scope.updateProfile = function(){
         
