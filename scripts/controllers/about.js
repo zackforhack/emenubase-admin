@@ -5,7 +5,7 @@ angular.module('appApp')
     var about = new Firebase('https//gforgelato.firebaseio.com/About');
   	$scope.about = $firebase(about);
     
-  	$scope.updateProfile = function(about){
+  	$scope.updateProfile = function(){
         
         var newAbout = {
                 'Name': $scope.Name,

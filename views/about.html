@@ -2,49 +2,49 @@
 	<h3 class="page-header">About</h3>
 	<div class="col-sm-11 add-menu-item-block">
     <h3>User Profile</h3>
-    <form name="menuForm">
+    <form name="menuForm" ng-repeat="(key,profile) in about">
         <div class="form-group col-sm-5">
             <label>User Name: </label>
-            <input class="form-control" type="text" ng-model="Name" value="{{about.Name}}">
+            <input class="form-control" type="text" ng-model="Name" value="{{profile.Name}}">
         </div>
         <div class="form-group col-sm-5">
         	<label>Address: </label>
-            <input class="form-control" type="text" ng-model="Address" value="{{about.Address}}">
+            <input class="form-control" type="text" ng-model="Address" value="{{profile.Address}}">
         </div>
         <div class="form-group col-sm-5">
         	<label>Telephone: </label>
-            <input class="form-control" type="text" ng-model="Telephone" value="{{about.Telephone}}">
+            <input class="form-control" type="text" ng-model="Telephone" value="{{profile.Telephone}}">
         </div>
         <div class="form-group col-sm-5">
         	<label>Hours: </label>
             <label>Monday: From</label>
-            <input class="form-control" type="text" ng-model="Hours.Monday.from" value="{{about.Hours.Monday.from}}">
+            <input class="form-control" type="text" ng-model="Hours.Monday.from" value="{{profile.Hours.Monday.from}}">
             <label>Monday: To</label>
-            <input class="form-control" type="text" ng-model="Hours.Monday.to" value="{{about.Hours.Monday.to}}">
+            <input class="form-control" type="text" ng-model="Hours.Monday.to" value="{{profile.Hours.Monday.to}}">
             <label>Tuesday: From</label>
-            <input class="form-control" type="text" ng-model="Hours.Tuesday.from" value="{{about.Hours.Tuesday.from}}">
+            <input class="form-control" type="text" ng-model="Hours.Tuesday.from" value="{{profile.Hours.Tuesday.from}}">
             <label>Tuesday: To</label>
-            <input class="form-control" type="text" ng-model="Hours.Tuesday.to" value="{{about.Hours.Tuesday.to}}">
+            <input class="form-control" type="text" ng-model="Hours.Tuesday.to" value="{{profile.Hours.Tuesday.to}}">
             <label>Wednesday: From</label>
-            <input class="form-control" type="text" ng-model="Hours.Wednesday.from" value="{{about.Hours.Wednesday.from}}">
+            <input class="form-control" type="text" ng-model="Hours.Wednesday.from" value="{{profile.Hours.Wednesday.from}}">
             <label>Wednesday: To</label>
-            <input class="form-control" type="text" ng-model="Hours.Wednesday.to" value="{{about.Hours.Wednesday.to}}">
+            <input class="form-control" type="text" ng-model="Hours.Wednesday.to" value="{{profile.Hours.Wednesday.to}}">
             <label>Thursday: From</label>
-            <input class="form-control" type="text" ng-model="Hours.Thursday.from" value="{{about.Hours.Thursday.from}}">
+            <input class="form-control" type="text" ng-model="Hours.Thursday.from" value="{{profile.Hours.Thursday.from}}">
             <label>Thursday: To</label>
-            <input class="form-control" type="text" ng-model="Hours.Thursday.to" value="{{about.Hours.Thursday.to}}">
+            <input class="form-control" type="text" ng-model="Hours.Thursday.to" value="{{profile.Hours.Thursday.to}}">
             <label>Friday: From</label>
-            <input class="form-control" type="text" ng-model="Hours.Friday.from" value="{{about.Hours.Friday.from}}">
+            <input class="form-control" type="text" ng-model="Hours.Friday.from" value="{{profile.Hours.Friday.from}}">
             <label>Wednesday: To</label>
-            <input class="form-control" type="text" ng-model="Hours.Friday.to" value="{{about.Hours.Friday.to}}">
+            <input class="form-control" type="text" ng-model="Hours.Friday.to" value="{{profile.Hours.Friday.to}}">
             <label>Saturday: From</label>
-            <input class="form-control" type="text" ng-model="Hours.Saturday.from" value="{{about.Hours.Saturday.from}}">
+            <input class="form-control" type="text" ng-model="Hours.Saturday.from" value="{{profile.Hours.Saturday.from}}">
             <label>Saturday: To</label>
-            <input class="form-control" type="text" ng-model="Hours.Saturday.to" value="{{about.Hours.Saturday.to}}">
+            <input class="form-control" type="text" ng-model="Hours.Saturday.to" value="{{profile.Hours.Saturday.to}}">
             <label>Sunday: From</label>
-            <input class="form-control" type="text" ng-model="Hours.Sunday.from" value="{{about.Hours.Sunday.from}}">
+            <input class="form-control" type="text" ng-model="Hours.Sunday.from" value="{{profile.Hours.Sunday.from}}">
             <label>Sunday: To</label>
-            <input class="form-control" type="text" ng-model="Hours.Sunday.to" value="{{about.Hours.Sunday.to}}">
+            <input class="form-control" type="text" ng-model="Hours.Sunday.to" value="{{profile.Hours.Sunday.to}}">
         </div>
 
 
