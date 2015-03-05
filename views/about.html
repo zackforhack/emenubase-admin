@@ -48,7 +48,26 @@
             <input class="form-control" type="text" ng-model="profile.Hours.Sunday.to">
         </div>
      </form>
-    <p><a class="btn btn-success col-sm-11" ng-href="" ng-click="updateProfile(key, this.profile)">Update Profile</a></p>
+    <p><a class="btn btn-success col-sm-11" data-toggle="modal" data-target="#myModal" ng-href="" ng-click="updateProfile(key, this.profile)">Update Profile</a></p>
     </div>
 </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Update Profile</h4>
+            </div>
+            <div class="modal-body">
+                    <p>Your Request Has Been Processed!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
