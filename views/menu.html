@@ -54,11 +54,11 @@
             <input class="form-control" type="number" ng-model="menuItem.price" placeholder="Price">
         </div>
         <div class="form-group">
-            <label>Item Image (under 10MB, 50KB recommended)</label>
+            <label>Item Image (under 100B, 50KB recommended)</label>
             <input type="file" ng-model="menuItem.image" name="file" base-sixty-four-input>
         </div>
     </form>
-    <p><a class="btn btn-success" ng-href="" ng-click="addItem()">Add New Item</a></p>
+    <p><a class="btn btn-success" ng-href="" ng-click="addItem()" ng-disabled="canUploadItem()">Add New Item</a></p>
 </div>
 
 

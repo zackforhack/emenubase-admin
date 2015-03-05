@@ -65,6 +65,11 @@ angular.module('appApp')
                 return true;
         };
 
+        $scope.canUploadItem = function(){
+            if (!$scope.menuItem.title || !$scope.menuItem.description || !$scope.menuItem.category || !$scope.menuItem.price || !($scope.menuItem.image.filesize <= 100000))
+                return true;
+        };
+
 
   });
 
