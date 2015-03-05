@@ -61,7 +61,7 @@ angular.module('appApp')
       };
 
       $scope.canUploadCateg = function(){
-            if (!$scope.categoryName)
+            if (!$scope.categoryName || $scope.image.filesize <= 100000)
                 return true;
         };
 
