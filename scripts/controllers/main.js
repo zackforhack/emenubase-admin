@@ -60,5 +60,11 @@ angular.module('appApp')
         categories.child(key).remove();
       };
 
+      $scope.canUploadCateg = function(){
+            if (!$scope.categoryName)
+                return true;
+        };
+
+
   });
 
