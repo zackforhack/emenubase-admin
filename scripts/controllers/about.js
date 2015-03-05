@@ -10,7 +10,8 @@ angular.module('appApp')
         var newAbout = {
                 'Name': $scope.Name,
                 'Address': $scope.Address,
-                'Telephone': $scope.Telephone
+                'Telephone': $scope.Telephone,
+                'Hours': $scope.Hours
             };
         $scope.about.$add(angular.fromJson(angular.toJson(newAbout))).then(function(ref) {
 
