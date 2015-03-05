@@ -9,17 +9,9 @@ angular.module('appApp')
       });
 
     
-  	$scope.updateProfile = function(){
+  	$scope.updateProfile = function(key,profile){
         
-        var newAbout = {
-                'Name': $scope.Name,
-                'Address': $scope.Address,
-                'Telephone': $scope.Telephone,
-                'Hours': $scope.Hours
-            };
-        $scope.about.$add(angular.fromJson(angular.toJson(newAbout))).then(function(ref) {
-
-            });
+       $scope.about.$save(key);
 
 
   	};
