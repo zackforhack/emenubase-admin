@@ -25,14 +25,14 @@
                     <input class="form-control" ng-model="categoryName" placeholder="Category Name">
                 </div>
                 <div class="form-group">
-                    <label>Category Image (under 10MB, 50KB recommended)</label>
+                    <label>Category Image (under 100KB, 50KB recommended)</label>
                     <input type="file" ng-model="image" name="file" base-sixty-four-input>
                 </div>
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" ng-click="addCategory()" ng-disabled="canUploadCateg" data-dismiss="modal">Add Category</button>
+                <button type="button" class="btn btn-primary" ng-click="addCategory()" ng-disabled="canUploadCateg()" data-dismiss="modal">Add Category</button>
             </div>
         </div>
     </div>
