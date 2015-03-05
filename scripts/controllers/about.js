@@ -8,11 +8,6 @@ angular.module('appApp')
         $scope.about = dataSnapshot.val();
       });
 
-    $scope.Name = $scope.about.Name;
-    $scope.Address = $scope.about.Address;
-    $scope.Telephone = $scope.about.Telephone;
-    $scope.Hours = $scope.about.Hours;
-
     
   	$scope.updateProfile = function(){
         
