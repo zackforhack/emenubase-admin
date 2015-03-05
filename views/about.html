@@ -2,6 +2,7 @@
 	<h3 class="page-header">About</h3>
 	<div class="col-sm-11 add-menu-item-block">
     <h3>User Profile</h3>
+    <div ng-repeat="(key,profile) in about">
     <form name="menuForm">
         <div class="form-group col-sm-5">
             <label>User Name: </label>
@@ -46,9 +47,8 @@
             <label>Sunday: To</label>
             <input class="form-control" type="text" ng-model="Hours.Sunday.to" value="{{profile.Hours.Sunday.to}}">
         </div>
-
-
-    </form>
+     </form>
+    </div>
     <p><a class="btn btn-success col-sm-11" ng-href="" ng-click="updateProfile()">Update Profile</a></p>
 </div>
 </div>
