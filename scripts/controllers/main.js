@@ -3,13 +3,14 @@
 angular.module('appApp')
   .controller('MainCtrl', function ($scope, $firebase, $http, $location) {
     var menu = new Firebase('https://gforgelato.firebaseio.com/MenuItems');
-    var categories = new Firebase('https://gforgelato.firebaseio.com/Category');
-
     $scope.menuItems = $firebase(menu);
 
+
+    var categories = new Firebase('https://gforgelato.firebaseio.com/Category');
     categories.on('value', function(dataSnapshot) {
         $scope.categories = dataSnapshot.val();
       });
+
 
     $scope.resetMenuItem = function(){
       $scope.menuItem = {
