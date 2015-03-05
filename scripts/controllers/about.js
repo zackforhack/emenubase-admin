@@ -15,8 +15,8 @@ angular.module('appApp')
                 'Name': profile.Name,
                 'Telephone': profile.Telephone,
                 'Hours': profile.Hours,
-                'Companyinfo', profile.Companyinfo,
-                'Foodquality', profile.Foodquality
+                'Companyinfo': profile.Companyinfo,
+                'Foodquality': profile.Foodquality
             };
 
         $scope.about.$add(angular.fromJson(angular.toJson(newAbout)));
