@@ -61,8 +61,14 @@ angular.module('appApp')
       };
 
     $scope.saveItem = function(item){
-        $scope.defaultItem = item;
-      };  
+        $scope.defaultItem.title = item.title;
+        $scope.defaultItem.image = item.image1;
+      }; 
+
+    $scope.saveItem2 = function(item){
+        $scope.defaultItem.title = item.title;
+        $scope.defaultItem.image = item.image2;
+      };     
 
 
 
