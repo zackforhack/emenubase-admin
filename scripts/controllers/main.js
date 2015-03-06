@@ -5,16 +5,22 @@ angular.module('appApp')
     var menu = new Firebase('https://gforgelato.firebaseio.com/MenuItems');
     $scope.menuItems = $firebase(menu);
 
-    
-
 
     var categories = new Firebase('https://gforgelato.firebaseio.com/Category');
     categories.on('value', function(dataSnapshot) {
         $scope.categories = dataSnapshot.val();
-        $scope.numofCateg = dataSnapshot.numofChildren();
       });
 
-    console.log($scope.numofCateg);
+    $scope.numofCateg = (function() {
+            var num = 0;
+            for(var item in $scope.categories) {
+                num++;
+            }
+            return num;
+        })();
+
+
+    console.log($scope.numofCateg)
 
 
     $scope.resetMenuItem = function(){
