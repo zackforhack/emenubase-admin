@@ -21,7 +21,7 @@ angular.module('appApp')
 
     $scope.numofItem = (function() {
             var num = 0;
-            for(var item in $scope.categories) {
+            for(var item in $scope.menuItems) {
                 num++;
             }
             return num;
