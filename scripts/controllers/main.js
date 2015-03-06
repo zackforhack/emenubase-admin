@@ -80,12 +80,12 @@ angular.module('appApp')
       };
 
       $scope.canUploadCateg = function(){
-            if (!$scope.categoryName || !($scope.image.filesize <= 100000) || !($scope.numofCateg < 5))
+            if (!$scope.categoryName || !($scope.image.filesize <= 100000) || !($scope.numofCateg < 4))
                 return true;
         };
 
         $scope.canUploadItem = function(){
-            if (!$scope.menuItem.title || !$scope.menuItem.description || !$scope.menuItem.category || !$scope.menuItem.price || !($scope.menuItem.image.filesize <= 100000) || !($scope.numofItem < 25))
+            if (!$scope.menuItem.title || !$scope.menuItem.description || !$scope.menuItem.category || !$scope.menuItem.price || !($scope.menuItem.image.filesize <= 100000) || !($scope.numofItem < 20))
                 return true;
         };
 
