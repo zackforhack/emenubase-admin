@@ -77,7 +77,7 @@ angular.module('appApp')
         };
 
         $scope.canUploadItem = function(){
-            if (!$scope.menuItem.title || !$scope.menuItem.description || !$scope.menuItem.category || !$scope.menuItem.price || !($scope.menuItem.image.filesize <= 100000))
+            if (!$scope.menuItem.title || !$scope.menuItem.description || !$scope.menuItem.category || !$scope.menuItem.price || !($scope.menuItem.image.filesize <= 100000) || !($scope.numofCateg < 5))
                 return true;
         };
 
