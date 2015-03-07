@@ -7,7 +7,7 @@ angular.module('appApp')
         $scope.menuItems = dataSnapshot.val();
       });
 
-    $scope.menuItemsfire = firebase(menu);
+    $scope.menuItemsfire = $firebase(menu);
 
 
     var categories = new Firebase('https://gforgelato.firebaseio.com/Category');
