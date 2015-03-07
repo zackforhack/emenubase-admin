@@ -32,7 +32,7 @@ angular.module('appApp')
     $scope.resetMenuItem();
 
     $scope.addItem = function(){
-        $scope.menuItems.$add($scope.menuItem);
+        $scope.menuItemsfire.$add($scope.menuItem);
         var inCategoryList = false;
         for (var index in $scope.categories) {
           if ($scope.menuItem.category === $scope.categories[index].name) {
