@@ -64,10 +64,6 @@ angular.module('appApp')
         $scope.defaultItem = item;
       }; 
 
-    $scope.saveItem2 = function(item){
-        $scope.defaultItem = item;
-        $scope.defaultItem.image = item.image2;
-      };     
 
 
 
