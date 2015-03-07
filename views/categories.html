@@ -2,8 +2,8 @@
     <button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#myModal">Add Category</button>
     <h3 class="page-header">Categories {{numofCateg}}/4</h3>
     <div class="row">
-        <div class="col-xs-12 col-md-3" ng-repeat="(key,categ) in categories" data-toggle="modal" data-target="#myModal1">
-            <a href="" class="thumbnail category-thumbnail">
+        <div class="col-xs-12 col-md-3" ng-repeat="(key,categ) in categories">
+            <a href="" class="thumbnail category-thumbnail" data-toggle="modal" data-target="#myModal1" ng-click="saveCateg(key, this.categ)">
                 <button type="button" class="close" aria-hidden="true" ng-click="deleteCateg(key)">&times;</button>
                 <img ng-src="data:{{categ.image.filetype}};base64,{{categ.image.base64}}" alt=""  style="max-height: 175px">
                 <h5>{{categ.name}}</h5>
@@ -43,16 +43,16 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Add Category</h4>
+                <h4 class="modal-title" id="myModalLabel">Update Category</h4>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label>Category Name</label>
+                    <label>{{defaultCateg.name}}</label>
                     <input class="form-control" ng-model="categoryName" placeholder="Category Name">
                 </div>
                 <div class="form-group">
-                    <label>Category Image (under 100KB, 50KB recommended)</label>
-                    <input type="file" ng-model="image" name="file" base-sixty-four-input>
+                    <label>Category Image:</label>
+                    <img ng-src="data:{{defaultCateg.image.filetype}};base64,{{defaultCateg.image.base64}}" alt=""  style="max-height: 175px">
                 </div>
 
             </div>

@@ -51,6 +51,10 @@ angular.module('appApp')
         $scope.defaultItem = item;
       }; 
 
+    $scope.saveCateg = function(key,categ){
+        $scope.defaultCateg = categ;
+      }; 
+      
 
 
 
