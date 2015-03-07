@@ -28,7 +28,7 @@ angular.module('appApp')
         })();    
 
 
-    console.log($scope.numofCateg);
+    console.log($scope.numofItem);
 
 
     $scope.resetMenuItem = function(){
