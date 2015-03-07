@@ -11,24 +11,9 @@ angular.module('appApp')
         $scope.categories = dataSnapshot.val();
       });
 
-    $scope.numofCateg = (function() {
-            var num = 0;
-            for(var item in $scope.categories) {
-                num++;
-            }
-            return num;
-        })();
-
-    $scope.numofItem = (function() {
-            var num = 0;
-            for(var item in $scope.menuItems) {
-                num++;
-            }
-            return num;
-        })();    
+    
 
 
-    console.log($scope.numofItem);
 
 
     $scope.resetMenuItem = function(){
@@ -89,6 +74,23 @@ angular.module('appApp')
             if (!$scope.menuItem.title || !$scope.menuItem.description || !$scope.menuItem.category || !$scope.menuItem.price || !($scope.menuItem.image.filesize <= 100000) || !($scope.numofItem < 20))
                 return true;
         };
+
+
+    $scope.numofCateg = (function() {
+            var num = 0;
+            for(var item in $scope.categories) {
+                num++;
+            }
+            return num;
+        })();
+
+    $scope.numofItem = (function() {
+            var num = 0;
+            for(var item in $scope.menuItems) {
+                num++;
+            }
+            return num;
+        })();   
 
 
   });
