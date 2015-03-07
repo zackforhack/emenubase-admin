@@ -13,8 +13,7 @@
                 <th>Description</th>
                 <th>Category</th>
                 <th>Price</th>
-                <th>Image1</th>
-                <th>Image2</th>
+                <th>Image</th>
                 <th>Delete</th>
                 </tr>
             </thead>
@@ -25,7 +24,6 @@
                     <td>{{item.category}}</td>
                     <td>${{item.price | number:2}}</td>
                     <td><a href=""><img ng-src="data:{{item.image.filetype}};base64,{{item.image.base64}}" width="40" height="40" ng-click="saveItem(this.item)" data-toggle="modal" data-target="#myModal"></a></td>
-                    <td><a href=""><img ng-src="data:{{item.image2.filetype}};base64,{{item.image2.base64}}" width="40" height="40" ng-click="saveItem(this.item)" data-toggle="modal2" data-target="#myModal2"></a></td>
                     <td><button class="btn btn-danger" ng-click="deleteItem(key)">delete</button></td>
                 </tr>
             </tbody>
