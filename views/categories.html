@@ -38,7 +38,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -54,11 +54,15 @@
                     <label>Category Image:</label>
                     <img ng-src="data:{{defaultCateg.image.filetype}};base64,{{defaultCateg.image.base64}}" alt=""  style="max-height: 175px">
                 </div>
+                <div class="form-group">
+                    <label>Update Category Image (under 100KB, 50KB recommended)</label>
+                    <input type="file" ng-model="defaultCateg.image" name="file" base-sixty-four-input>
+                </div>
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" ng-click="addCategory()" ng-disabled="canUploadCateg()" data-dismiss="modal">Add Category</button>
+                <button type="button" class="btn btn-primary" ng-click="updateCategory()" ng-disabled="canUpdateCateg()" data-dismiss="modal1">Update Category</button>
             </div>
         </div>
     </div>
