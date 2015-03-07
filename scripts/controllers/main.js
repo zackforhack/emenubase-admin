@@ -7,6 +7,8 @@ angular.module('appApp')
         $scope.menuItems = dataSnapshot.val();
       });
 
+    $scope.menuItemsfire = firebase(menu);
+
 
     var categories = new Firebase('https://gforgelato.firebaseio.com/Category');
     categories.on('value', function(dataSnapshot) {
@@ -44,7 +46,7 @@ angular.module('appApp')
       };
 
     $scope.deleteItem = function(key){
-        $scope.menuItems.$remove(key);
+        $scope.menuItemsfire.$remove(key);
       };
 
     $scope.saveItem = function(item){
