@@ -3,7 +3,9 @@
 angular.module('appApp')
   .controller('MainCtrl', function ($scope, $firebase, $http, $location) {
     var menu = new Firebase('https://gforgelato.firebaseio.com/MenuItems');
-    $scope.menuItems = $firebase(menu);
+    menu.on('value', function(dataSnapshot) {
+        $scope.menuItems = dataSnapshot.val();
+      });
 
 
     var categories = new Firebase('https://gforgelato.firebaseio.com/Category');
