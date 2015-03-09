@@ -33,6 +33,8 @@ angular.module('appApp', [
       .otherwise({
         redirectTo: '/about'
       });
+
+      $locationProvider.html5Mode(true);
   })
 
  .run(function($rootScope, $location, $http) {
