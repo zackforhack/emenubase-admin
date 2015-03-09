@@ -8,7 +8,7 @@ angular.module('appApp', [
   'firebase',
   'naif.base64'
 ])
-  .config(function ($routeProvider,$locationProvider) {
+  .config(function ($routeProvider) {
     $routeProvider
       .when('/about', {
         templateUrl: 'views/about.html',
@@ -33,8 +33,6 @@ angular.module('appApp', [
       .otherwise({
         redirectTo: '/about'
       });
-
-      $locationProvider.html5Mode(true);
   })
 
  .run(function($rootScope, $location, $http) {
