@@ -8,7 +8,7 @@ angular.module('appApp', [
   'firebase',
   'naif.base64'
 ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider,$locationProvider) {
     $routeProvider
       .when('/about', {
         templateUrl: 'views/about.html',
